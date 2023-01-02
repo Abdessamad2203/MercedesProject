@@ -9,9 +9,11 @@ module.exports = {
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-source-wordpress",
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+        url: "http://mercedesagencyproject.local/graphql",
       },
     },
     `gatsby-transformer-sharp`,
