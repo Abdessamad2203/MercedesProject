@@ -2,15 +2,29 @@ import * as React from 'react'
 import Layout from '../../components/layout'
 import { graphql } from 'gatsby'
 import { Link } from 'gatsby'
-
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import {mercedesimage} from "/src/pages/mercedes/Style/mercedes.module.css"
+import { node } from 'prop-types'
   
 
-const MercedesPage = ({data: {wpMercedes: {mercedes}}}) => {
+const MercedesPage = ({
+    data:{
+        wpMercedes: {mercedes},
+    },
+
+    }) => {
+
+const image1 = getImage(mercedes.picture.localFile)
+
+
+
     return (
       <Layout pageTitle="Mercedes Template">
         <div>
           <h3>{mercedes.title}</h3>
-  
+
+          <GatsbyImage className={mercedesimage} image = {Image} alt = {mercedes.picture.altText}></GatsbyImage>
+ 
           <div dangerouslySetInnerHTML={{__html: mercedes.description}} />
           <p>category : {mercedes.category}</p>
           <p>model : {mercedes.model}</p>
@@ -33,10 +47,8 @@ const MercedesPage = ({data: {wpMercedes: {mercedes}}}) => {
 
 export const query = graphql`
 
-query ($id: String){
-    wpMercedes(id: {eq: $id}) {
-      slug
-      id
+query MyQuery($slug: String) {
+    wpMercedes(slug: {eq: $slug}) {
       mercedes {
         category
         description
@@ -45,17 +57,19 @@ query ($id: String){
         material
         model
         options
-        picture {
-          localFile {
-            childrenImageSharp {
-              gatsbyImageData
-            }
-          }
-        }
         price
         title
         yearOfManufacturing
+        picture {
+          localFile {
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED)
+            }
+          }
+          altText
+        }
       }
     }
-  }  `
+  }
+    `
   export default MercedesPage

@@ -9,13 +9,14 @@ const indexmercedes = ({data:{allWpMercedes:{edges}}}) => {
         
         {edges.map(({node:{id, slug, mercedes}}) => {
             return(
-
+  
+                    
                 <Link to = {`/mercedes/${slug}`} key = {id}>
                 {mercedes.title}
                 </Link>
 
                 
-            
+
 
 
 )})}
