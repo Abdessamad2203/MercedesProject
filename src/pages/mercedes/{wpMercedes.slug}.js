@@ -4,7 +4,6 @@ import { graphql } from 'gatsby'
 import { Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import {mercedesimage} from "/src/pages/mercedes/Style/mercedes.module.css"
-import { node } from 'prop-types'
   
 
 const MercedesPage = ({
@@ -14,7 +13,7 @@ const MercedesPage = ({
 
     }) => {
 
-const image1 = getImage(mercedes.picture.localFile)
+const Image = getImage(mercedes.picture.localFile)
 
 
 
@@ -31,6 +30,9 @@ const image1 = getImage(mercedes.picture.localFile)
           <p>fieldGroupName : {mercedes.fieldGroupName}</p>
           <p>horsepower : {mercedes.horsepower}</p>
           <p>material : {mercedes.material}</p>
+          <p>options : {mercedes.options}</p>
+          <p>yearOfManufacturing : {mercedes.yearOfManufacturing}</p>
+          <p>price : {mercedes.price}</p>
           </div>
           <Link to='/mercedes'>Go back</Link>
       </Layout>

@@ -5,6 +5,7 @@ import "./Style/layout.module.css"
 
 
 const layout = ({children}) => {
+  
   return (
     <>
     <Navbar/>
