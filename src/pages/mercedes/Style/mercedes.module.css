@@ -4,7 +4,14 @@
     border-radius: 2%;
     background-color: black;
     align-items: center;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
     
+}
+body{
+    overflow-x:hidden
 }
 
 
@@ -14,9 +21,6 @@ margin-bottom: 50px;
 
 
 }
-div{
-    text-align: center;
-}
 p{
     text-align: center;
 }
@@ -25,3 +29,35 @@ h3{
 text-align: center;    
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

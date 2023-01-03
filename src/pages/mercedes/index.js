@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from "../../components/Layout"
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import {Picmercedespage, Namemercedespage} from "./Style/index.css"
+import{Picmercedespage , Namemercedespage} from "/src/pages/mercedes/Style/index.css"
 
 
 const indexmercedes = ({data:{allWpMercedes:{edges}}}) => {
@@ -26,7 +26,7 @@ return(
                 </Link>
                 </div>
                 <div  className="Picmercedespage">
-                <GatsbyImage style={{width: '150px'}} image={Image}></GatsbyImage>
+                <GatsbyImage style={{width: '500px'}} image={Image}></GatsbyImage>
     </div>
     </div>
     

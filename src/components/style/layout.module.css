@@ -8,15 +8,39 @@ body{
 }
 
 a{
-    display: flex;
+    display: grid;
+    text-align: center;
 }
 
+li{
+    background-color: grey;
+    border: none;
+    color: white;
+    padding: 8px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 0;
+    transition-duration: 0.4s;
+    cursor: pointer;    
+}
+
+li:hover{
+    
+        background-color:beige;
+      
+}
+.button{
+    width: 100%;
+}
 
 ul{
     list-style-type: none; 
     display: flex;
-    background-color: grey;
+    background-color: none;
     margin: 0;
+    width: 100%;
 }
 
 a:link { 
@@ -25,6 +49,9 @@ a:link {
     color: black;
     padding: 1rem;
     justify-content: center;
+    padding: 30px;
+    align-items: center;
+    
 
 }
 
@@ -34,9 +61,5 @@ p{
     font-size: large;
 }
 
-.flexThisBox{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    
-}
+
+

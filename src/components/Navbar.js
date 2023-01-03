@@ -3,13 +3,12 @@ import { Link } from 'gatsby'
 
 
 
-
 const Navbar = () => {
   return (
     <nav>
-        <ul>
+        <ul className='button'>
 
-            <li>
+            <li >
 <Link to = "/">Home</Link>
             </li>
 
