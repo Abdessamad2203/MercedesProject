@@ -3,7 +3,8 @@ import Layout from '../../components/layout'
 import { graphql } from 'gatsby'
 import { Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import {mercedesimage} from "/src/pages/mercedes/Style/mercedes.module.css"
+import {mercedesimage, detailmercedes} from "/src/pages/mercedes/Style/mercedes.module.css"
+import Footer from '../../components/Footer'
   
 
 const MercedesPage = ({
@@ -19,8 +20,8 @@ const Image = getImage(mercedes.picture.localFile)
 
     return (
       <Layout pageTitle="Mercedes Template">
-        <div>
-          <h3>{mercedes.title}</h3>
+        <div className='detailmercedes'>
+          <h3 className='detailtitle'>{mercedes.title}</h3>
 
           <GatsbyImage className={mercedesimage} image = {Image} alt = {mercedes.picture.altText}></GatsbyImage>
  
@@ -35,6 +36,7 @@ const Image = getImage(mercedes.picture.localFile)
           <p>price : {mercedes.price}</p>
           </div>
           <Link to='/mercedes'>Go back</Link>
+          <Footer></Footer>
       </Layout>
     )
   }

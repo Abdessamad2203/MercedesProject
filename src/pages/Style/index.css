@@ -1,0 +1,15 @@
+.mainindex{
+    background-color: whitesmoke;
+    margin: 0;
+    margin-bottom: 100px;
+}
+
+.indextitle{
+   text-align: center;
+   margin-top: 1rem;
+}
+
+.picturemain{
+    width: 100%;
+    height: auto;
+}

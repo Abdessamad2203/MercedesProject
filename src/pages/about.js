@@ -6,7 +6,7 @@ const about = () => {
 
 
     <Layout>
-    <div>
+    <div className='indextitle'>
         
         
         <h1>this the about page</h1>

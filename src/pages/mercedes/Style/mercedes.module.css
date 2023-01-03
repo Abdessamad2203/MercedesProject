@@ -1,6 +1,27 @@
 .mercedesimage{
     width: 500px;
     max-width: 500px;
-    border-radius: 3px;
+    border-radius: 2%;
     background-color: black;
+    align-items: center;
+    
+}
+
+
+.detailmercedes{
+text-align: center;
+margin-bottom: 50px;
+
+
+}
+div{
+    text-align: center;
+}
+p{
+    text-align: center;
+}
+
+h3{
+text-align: center;    
+
 }

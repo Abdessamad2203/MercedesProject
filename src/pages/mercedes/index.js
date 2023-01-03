@@ -1,6 +1,8 @@
 import * as React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from "../../components/Layout"
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import {Picmercedespage, Namemercedespage} from "./Style/index.css"
 
 
 const indexmercedes = ({data:{allWpMercedes:{edges}}}) => {
@@ -11,16 +13,23 @@ const indexmercedes = ({data:{allWpMercedes:{edges}}}) => {
         
         
         {edges.map(({node:{id, slug, mercedes}}) => {
-            return(
 
+
+            const Image = getImage(mercedes.picture.localFile)
+            
+return(
+  
+<div>
+    <div className= "Namemercedespage">
                 <Link to = {`/mercedes/${slug}`} key = {id}>
-                {mercedes.title}
+                {mercedes.title} 
                 </Link>
-
-                
-
-
-
+                </div>
+                <div  className="Picmercedespage">
+                <GatsbyImage style={{width: '150px'}} image={Image}></GatsbyImage>
+    </div>
+    </div>
+    
 )})}
         
         
