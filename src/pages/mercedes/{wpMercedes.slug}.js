@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import { Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import {mercedesimage} from "/src/pages/mercedes/Style/mercedes.module.css"
-import{Picmercedespage , Namemercedespage, detailmercedes, detailtitle} from "/src/pages/mercedes/Style/index.css"
+import{Picmercedespage , Namemercedespage, detailmercedes, detailtitle, gobackbutton} from "/src/pages/mercedes/Style/index.css"
   
 
 const MercedesPage = ({
@@ -25,17 +25,17 @@ const Image = getImage(mercedes.picture.localFile)
 
           <GatsbyImage className={mercedesimage} image = {Image} alt = {mercedes.picture.altText}></GatsbyImage>
  
-          <div dangerouslySetInnerHTML={{__html: mercedes.description}} />
-          <p>category : {mercedes.category}</p>
-          <p>model : {mercedes.model}</p>
-          <p>fieldGroupName : {mercedes.fieldGroupName}</p>
-          <p>horsepower : {mercedes.horsepower}</p>
-          <p>material : {mercedes.material}</p>
-          <p>options : {mercedes.options}</p>
-          <p>yearOfManufacturing : {mercedes.yearOfManufacturing}</p>
-          <p>price : {mercedes.price}</p>
+          <div className='descriptiondetailmercedes' dangerouslySetInnerHTML={{__html: mercedes.description}} />
+          <p className='textdetailscars'>category : {mercedes.category}</p>
+          <p className='textdetailscars'>model : {mercedes.model}</p>
+          <p className='textdetailscars'>fieldGroupName : {mercedes.fieldGroupName}</p>
+          <p className='textdetailscars'>horsepower : {mercedes.horsepower}</p>
+          <p className='textdetailscars'>material : {mercedes.material}</p>
+          <p className='textdetailscars'>options : {mercedes.options}</p>
+          <p className='textdetailscars'>yearOfManufacturing : {mercedes.yearOfManufacturing}</p>
+          <p className='textdetailscars'>price : {mercedes.price}</p>
           </div>
-          <Link to='/mercedes'>Go back</Link>
+          <Link to='/mercedes' className='gobackbttn'>Go back</Link>
           
       </Layout>
     )

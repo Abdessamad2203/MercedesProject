@@ -1,3 +1,10 @@
+:root {
+    --red: tomato;
+    --bgColor: bisque;
+  }
+  
+
+
 .Namemercedespage{
     width: 50%;
     margin-left: auto;
@@ -7,10 +14,107 @@
 }
 
 .Picmercedespage{
-    display: block;
+    display: flex;
     margin-left: auto;
     margin-right: auto;
-    width: 30%;
+    width: 25%;
     margin-bottom: 25px;
     border-radius: 10px;
+    box-shadow:
+    -50px -50px 0 -40px var(--red),
+    50px 50px 0 -40px var(--red);
 }
+
+.buttonmercedespage{
+    position: relative;
+    display: inline-flex;
+    width: 100%;
+    height: 100px;
+    perspective: 1000px;
+  }
+  .buttonmercedespage{
+    font-size: 15px;
+    letter-spacing: 0;
+    transform-style: preserve-3d;
+    transform: translateZ(-25px);
+    transition: transform .25s;
+    font-family: 'Montserrat', sans-serif;
+    
+  }
+  .buttonmercedespage:before,
+  .buttonmercedespage:after{
+    position: absolute;
+    content: "Click here to see DETAILS!";
+    height: 55px;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid black;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+
+  .buttonmercedespage :before{
+    color: #fff;
+    background: #000;
+    transform: rotateY(0deg) translateZ(25px);
+  }
+  .buttonmercedespage:after{
+    color: #000;
+    background:cadetblue;
+    transform: rotateX(90deg) translateZ(25px);
+  }
+  .buttonmercedespage:hover{
+    transform: translateZ(-25px) rotateX(-90deg);
+  }
+
+
+  
+
+  
+.gobackbttn{
+  display: inline-flex;
+  width: 10%;
+  margin-left: 43%;
+  outline: 0;
+  appearance: none;
+  padding: 0px 12px;
+  border: 0px solid transparent;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: blue;
+  box-shadow: rgb(19 170 82 / 40%) 0px 2px 3px;
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  font-weight: 400;
+  height: 36px;
+  transition: all 150ms ease-in-out 0s;}
+
+  .gobackbttn:hover {
+      color: rgb(255, 255, 255);
+      background-color: red;
+      box-shadow: rgb(19 170 82 / 40%) 0px 2px 3px, rgb(195 231 202) 0px 0px 0px 3px;
+  }
+
+
+  .descriptiondetailmercedes{
+    text-align: center;
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+  }
+
+  .textdetailscars{
+width: 20%;
+margin-left: 39%;
+    text-align: center;
+    --s: 5px; /* control the size */
+    padding: var(--s);
+    border: calc(2*var(--s)) solid #0000;
+    outline: 1px solid #000;
+    outline-offset: calc(-1*var(--s));
+    background: conic-gradient(from 90deg at 1px 1px,#0000 25%,#000 0);
+  }

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import {} from "/src/components/Style/navbar.module.css"
 
 
 
@@ -12,9 +13,6 @@ const Navbar = () => {
 <Link to = "/">Home</Link>
             </li>
 
-            <li>
-<Link to = "/about">about</Link>
-            </li>
 
             <li>
 <Link to = "/contact">contact</Link>

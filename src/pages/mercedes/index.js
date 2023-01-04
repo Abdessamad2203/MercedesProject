@@ -19,22 +19,24 @@ const indexmercedes = ({data:{allWpMercedes:{edges}}}) => {
             
 return(
   
-<div>
+<div className='containerindex'>
     <div className= "Namemercedespage">
-                <Link to = {`/mercedes/${slug}`} key = {id}>
-                {mercedes.title} 
+                <Link to = {`/mercedes/${slug}`} key = {id} className="buttonmercedespage">
+                  
                 </Link>
                 </div>
                 <div  className="Picmercedespage">
                 <GatsbyImage style={{width: '500px'}} image={Image}></GatsbyImage>
+    
     </div>
-    </div>
+</div>
     
 )})}
         
         
         
         </Layout>
+        
   )
 }
 
