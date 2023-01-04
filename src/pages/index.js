@@ -18,7 +18,9 @@ const IndexPage = ({ data: { wpPage: { homeFields } },}) => {
       <div className="mainindex">
       <p>------------------------------------------------------------------------------------------------------------------------------</p>
         <h1 className="indextitle">{homeFields.title}</h1>
-        <GatsbyImage image = {image}></GatsbyImage>
+        
+        <GatsbyImage className="picturemain" image={image}></GatsbyImage>
+        <h1 style={{textAlign: "center"}}>{homeFields.description}</h1>
         
         {
           homeFields.feauturedProducts.map((item) => {
@@ -27,21 +29,17 @@ const IndexPage = ({ data: { wpPage: { homeFields } },}) => {
             const image = getImage(mercedes.picture.localFile)
 
             return <div> 
-            <Link to = {`/mercedes/${slug}`} >
+            <Link to = {`/mercedes/${slug}`}>
               <GatsbyImage
                 image={image}
-                
+                className="picturemain"
                 
               />
               <p key={item.id}  style={{fontSize:"23px"}}><b>{mercedes.title}</b></p>
-              <p >{mercedes.description}</p>
               </Link>
             </div>
           })
         }
-
-        
-        
         
         <br></br>
         <a href="/mercedes">        

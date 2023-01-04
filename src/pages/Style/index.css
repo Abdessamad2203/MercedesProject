@@ -17,8 +17,9 @@
 
 .picturemain{
     display: block;
-    margin-left: auto;
+    margin-left: 25%;
     margin-right: auto;
+    
     width: 50%;
     --s: 10px; /* control the size */
     padding: var(--s);

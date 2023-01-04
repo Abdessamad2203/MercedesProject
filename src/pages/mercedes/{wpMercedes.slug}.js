@@ -3,7 +3,7 @@ import Layout from '../../components/layout'
 import { graphql } from 'gatsby'
 import { Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import {mercedesimage} from "/src/pages/mercedes/Style/mercedes.module.css"
+import {picturemain} from "/src/pages/mercedes/Style/mercedes.module.css"
 import{Picmercedespage , Namemercedespage, detailmercedes, detailtitle, gobackbutton} from "/src/pages/mercedes/Style/index.css"
   
 
@@ -23,7 +23,7 @@ const Image = getImage(mercedes.picture.localFile)
         <div className='detailmercedes'>
           <h3 className='detailtitle'>{mercedes.title}</h3>
 
-          <GatsbyImage className={mercedesimage} image = {Image} alt = {mercedes.picture.altText}></GatsbyImage>
+          <GatsbyImage className={picturemain} image = {Image} alt = {mercedes.picture.altText}></GatsbyImage>
  
           <div className='descriptiondetailmercedes' dangerouslySetInnerHTML={{__html: mercedes.description}} />
           <p className='textdetailscars'>category : {mercedes.category}</p>
