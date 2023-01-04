@@ -1,0 +1,11 @@
+
+inlog gegevens Leerkracht: 
+
+username : Denis1
+
+password : TO4FLnI0oy(L3zK1mB&kB5*8
+
+
+github link : https://github.com/Abdessamad2203/MercedesProject
+
+netlify link : https://abdessamadmercedes.netlify.app/

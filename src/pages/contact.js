@@ -7,7 +7,7 @@ const contact = () => {
     <Layout>
     <div className='indexform'>
 
-<h1>If you have any questions, i would like to hear from you!</h1>
+<h1>If you have any questions, I would like to hear from you!</h1>
       <section className={form}>
         <form name="contact" method="POST" data-netlify="true">
             <label>Your Name:</label>

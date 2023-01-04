@@ -28,11 +28,11 @@ const Image = getImage(mercedes.picture.localFile)
           <div className='descriptiondetailmercedes' dangerouslySetInnerHTML={{__html: mercedes.description}} />
           <p className='textdetailscars'>category : {mercedes.category}</p>
           <p className='textdetailscars'>model : {mercedes.model}</p>
-          <p className='textdetailscars'>fieldGroupName : {mercedes.fieldGroupName}</p>
+          <p className='textdetailscars'>Field GroupName : {mercedes.fieldGroupName}</p>
           <p className='textdetailscars'>horsepower : {mercedes.horsepower}</p>
           <p className='textdetailscars'>material : {mercedes.material}</p>
           <p className='textdetailscars'>options : {mercedes.options}</p>
-          <p className='textdetailscars'>yearOfManufacturing : {mercedes.yearOfManufacturing}</p>
+          <p className='textdetailscars'>Year Of Manufacturing : {mercedes.yearOfManufacturing}</p>
           <p className='textdetailscars'>price : {mercedes.price}</p>
           </div>
           <Link to='/mercedes' className='gobackbttn'>Go back</Link>
